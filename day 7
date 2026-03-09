@@ -25,3 +25,62 @@ class Solution(object):
                 return False
         return True
         
+BINARY TREE INORDER TRAVERSAL
+class Solution:
+    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        result=[]
+        self.inorder(root,result)
+        return result
+    def inorder(self,root,result):
+        if(root==None):
+            return
+        self.inorder(root.left,result)
+        result.append(root.val)
+        self.inorder(root.right,result)
+            
+BINARY TREE PREORDER TRAVERSAL
+class Solution(object):
+    def preorderTraversal(self, root):
+        result=[]
+        self.preorder(root,result)
+        return result
+
+    def preorder(self,root,result):
+        if(root==None):
+            return
+        result.append(root.val)
+        self.preorder(root.left,result)
+        
+        self.preorder(root.right,result)
+
+
+BINARY TREE POSTORDER TRAVERSAL
+class Solution(object):
+    def postorderTraversal(self, root):
+        result=[]
+        self.postorder(root,result)
+        return result
+
+    def postorder(self,root,result):
+        if(root==None):
+            return
+        self.postorder(root.left,result)
+        self.postorder(root.right,result)
+        result.append(root.val)
+
+
+
+
+BINARY TREES INORDER TRAVERSAL
+class Solution(object):
+    def postorderTraversal(self, root):
+        result=[]
+        self.postorder(root,result)
+        return result
+
+    def postorder(self,root,result):
+        if(root==None):
+            return
+        self.postorder(root.left,result)
+        self.postorder(root.right,result)
+        result.append(root.val)
